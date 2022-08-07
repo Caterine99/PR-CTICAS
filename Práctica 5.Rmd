@@ -1,0 +1,36 @@
+---
+title: 'UNIDAD 1: Práctica 05-Estructuras de control y definición de función en R'
+author: "Caterine Melissa Guerrero España"
+date: "7/8/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ifelse(prueba, si, no)
+
+Donde:
+-   prueba: Es un vector lógico o condición lógica a ser evaluada.
+-   si: devuelve valores para los elementos ciertos de "prueba".
+-   no: devuelve valores para los elementos falsos de "prueba".
+
+
+El uso de if() está limitado a expresiones que no sean vectores. Si estamos evaluando vectores o matrices entonces lo indicado es hacerlo con ifelse() que devuelve un valor con la misma forma que
+el argumento "prueba" el cual es llenado con elementos seleccionados bien sea del argumento "si" o del argumento "no" dependiendo de si el elemento de "prueba" es "TRUE" O "FALSE", si los argumentos "si" o "no" son muy cortos, entonces sus elementos son reciclados
+
+Por ejemplo, ejecute las siguientes instrucciones
+
+```{r}
+x <- c(6:-4)
+x
+
+sqrt(x) # Produce un mensaje de advertencia
+
+sqrt(ifelse(x >= 0, x, NA)) # No produce advertencia
+
+ifelse(x >= 0, sqrt(x), NA) # Produce un mensaje de advertencia
+
+```
+
