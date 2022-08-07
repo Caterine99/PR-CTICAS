@@ -163,3 +163,11 @@ Con esta instrucción se indica la hoja en la cual se encuentran los datos con l
 A parte de leer archivos en formato texto y delimitados por comillas, R permite leer datos en una gran variedad de formato entre ellos se encuentra archivos el formato de SPSS ".sav". Para poder leerlos primero debemos de cargar el paquete correspondiente en el cual se encuentran la función que nos permitirá leer los ficheros de datos. Para el caso de SPSS, debe cargar el paquete foreign. El cual es necesario para lectura y escritura de datos.
 
 Para leer los datos se usa la siguiente función Read.spss("nombreArchivo",use.values.labels.=FALSE, max.value.label=Inf, to.data.frame=T); donde use.values.labels=TRUE significa que si en el archivo existen variables categóricas que han sido previamente codificadas con su respectiva etiqueta, entonces se leerán directamente las etiquetas y no los valores de esta (por ejemplo, si 1 representa Femenino, se leerá Femenino en lugar de 1). to.data.frame =T indica que los datos serán almacenados en un data.frame, muy recomendable para análisis estadístico. Puede consultar más ayuda de la función con la instrucción help(read.spss).
+
+-   Instalar el paquete foreign, con la siguiente instrucción install.packages(c("foreign")) o desde el menú como en el caso de la instalación del paquete Foreing.
+
+-   Cargar el paquete con la siguiente instrucción: library(foreign)
+
+-   Leer el contenido del archivo “demo.sav”, con la instrucción: read.spss(“demo.sav”, use.value.labels=TRUE, max.value.label=Inf, to.data.frame=T)
+
+-   Realizar los análisis o cálculos correspondientes.
